@@ -1,0 +1,19 @@
+from pwn import *
+
+HOST = ""
+PORT = 
+conn= ptgrocess("./")
+#conn = remote(HOST, PORT)
+
+ret = conn.recv() 
+#ret = conn.recvuntil('') 
+
+log.info(ret) 
+
+payload = ""
+payload += p32(0x)
+
+conn.sendline()
+
+
+conn.interactive()
