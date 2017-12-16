@@ -5,15 +5,16 @@ PORT =
 conn= ptgrocess("./")
 #conn = remote(HOST, PORT)
 
-ret = conn.recv() 
-#ret = conn.recvuntil('') 
+ret = conn.recv() #出力をEOFまで
+#ret = conn.recvuntil('') #出力を引数の文字列まで
 
 log.info(ret) 
 
 payload = ""
-payload += p32(0x)
+payload += p32(shell)
+#payload += p64(shell)
 
-conn.sendline()
+conn.sendline()　#shellcode
 
 
 conn.interactive()
