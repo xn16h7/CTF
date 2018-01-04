@@ -6,7 +6,9 @@ conn= ptgrocess("./")
 #conn = remote(HOST, PORT)
 
 ret = conn.recv() #出力をEOFまで
-#ret = conn.recvuntil('') #出力を引数の文字列まで
+ret = conn.recvuntil(':') #出力を:まで
+ret = p.recvline() # 改行まで
+ret = p.recvline(timeout=0.01) # timeout
 
 log.info(ret) 
 
