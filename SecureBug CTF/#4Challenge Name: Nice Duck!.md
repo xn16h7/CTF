@@ -8,5 +8,5 @@ wiresharkで開く
 HTTPでエクスポートしたら動画ファイルに変換できたので動画を見ると
 FLAGゲット
 
-![aa](https://github.com/xn16h7/CTF/blob/master/img/writeup4.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/writeup4.png)
 
