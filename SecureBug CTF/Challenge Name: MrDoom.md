@@ -185,7 +185,7 @@ Function1つ目
 `'#';alert('flag1')//`
 を入力した場合出力が下記のようになるので発火する
 
-<script>'({"userdata":"';alert('flag1')//"}
+``<script>'({"userdata":"';alert('flag1')//"}``
 
 `FLAG{th!5_!5_my_l0ng_`
 
