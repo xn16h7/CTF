@@ -1,7 +1,7 @@
 # Challenge Name: Trojan Horse
 ***
 画像ファイルをアップロードできるサイト
-![aa](https://github.com/xn16h7/CTF/blob/master/img/writeup6.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/writeup6.png)
 
 バックドアシェルをアップロードしてみる
 色々試した結果ファイル名とContent-Typeを書き換えるとbypassが可能だった
@@ -58,12 +58,12 @@ Submit
 ~~~
 
 アップロードに成功した。
-![aa](https://github.com/xn16h7/CTF/blob/master/img/%E2%91%A1writeup6.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/%E2%91%A1writeup6.png)
 
 
 下記のようにクエリにしてOSコマンドを実行してみるとlsコマンドが実行できた。
 18.194.166.81/trojan/uploads/b804e095f705962280b4b4102d58c3d6.php?cmd=ls
-![aa](https://github.com/xn16h7/CTF/blob/master/img/%E2%91%A2writeup6.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/%E2%91%A2writeup6.png)
 
 flagがなかったので
 問題文でパスワードがプレーンtextって書いてあったので下記payloadを送ってPHPを実行する。
@@ -72,7 +72,7 @@ flagがなかったので
     system("cat /etc/passwd");
 ?>
 ~~~
-![aa](https://github.com/xn16h7/CTF/blob/master/img/%E2%91%A3writeup6.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/%E2%91%A3writeup6.png)
 
 ### SBCTF{unr3s7r1c73d_f1l3_upl04d_1s_d4ng3r0us}
 
