@@ -35,4 +35,4 @@ a='S',xx='_',ab='}',c='C',d='T',e='F',f='{',g='n',r='c',bg='0',fv='B',i='t',j='_
 `flag=a[_0x26ff06(0x16f)](fv,c,d,e,f,g,bg,i,j,k,xx,m,n,o,jj,q,r,s,kk,u,ab)`
 
 ---
-###`SBCTF{n0t_a_nice_code}`
+`SBCTF{n0t_a_nice_code}`
