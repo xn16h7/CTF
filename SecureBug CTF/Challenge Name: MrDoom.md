@@ -149,7 +149,7 @@ http://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
 
 
 ***
-
+下記の部分でflagを取る
 ~~~
         <script>  
           
