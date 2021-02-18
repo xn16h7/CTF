@@ -72,5 +72,7 @@ flagがなかったので
     system("cat /etc/passwd");
 ?>
 ~~~
+![aa](https://github.com/xn16h7/CTF/blob/master/img/%E2%91%A3writeup6.png)
+
 ### SBCTF{unr3s7r1c73d_f1l3_upl04d_1s_d4ng3r0us}
 
