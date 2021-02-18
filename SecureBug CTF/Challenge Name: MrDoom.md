@@ -5,8 +5,9 @@ http://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
 </textarea><input type=text value=x onmouseover=alert('flag1')>
 とかでXSSが発火したのでXSSがあることがわかる。
 
+ページソースをみる
 ***
-ページソース
+
 ~~~
 <!doctype html>
 <html>
@@ -102,7 +103,7 @@ http://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
 
         <center><div>
                         <form method="POST" action="">
-                <textarea id="string" type="text" name="data">Comment#alert('flag1');</textarea><br>
+                <textarea id="string" type="text" name="data"></textarea><br>
                 <input type="submit" value="submit"/>
             </form>
         
