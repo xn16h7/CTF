@@ -1,9 +1,11 @@
 # Challenge Name: MrDoom
 
 http://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
+![aa](https://github.com/xn16h7/CTF/blob/master/img/writeup1.png)
 
-</textarea><input type=text value=x onmouseover=alert('flag1')>
-とかでXSSが発火したのでXSSがあることがわかる。
+
+入力フォームに</textarea><input type=text value=x onmouseover=alert('flag1')>
+とか入力してSubmitするとXSSが発火したのでXSSがあることがわかる。
 
 ページソースをみる
 ***
