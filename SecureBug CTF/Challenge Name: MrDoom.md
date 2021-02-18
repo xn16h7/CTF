@@ -188,7 +188,7 @@ Function1つ目
 <script>'({"userdata":"';alert('flag1')//"}
 
 前半部分
-`FLAG{th!5_!5_my_l0ng_`
+FLAG{th!5_!5_my_l0ng_
 
 Function2つ目
 
