@@ -28,6 +28,6 @@ stringsコマンドでワードだとわかる
 
 wordとして開くとフラグがある
 
-![aa](https://github.com/xn16h7/CTF/blob/master/img/writeup3.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/writeup3.png)
 
 ### BCTF{n1c3_c4rv1n6_w3ll_d0n3}
