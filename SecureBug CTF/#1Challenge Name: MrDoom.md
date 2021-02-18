@@ -194,10 +194,10 @@ Function1つ目
 ***
 Function2つ目
 
-var a = document.createElement('div');があるので<div>が生成されているため</div>で閉じる
+`var a = document.createElement('div');` があるので `<div>` が生成されているため `</div>` で閉じる
 
-`Comment#></div><script>alert('flag2')</script>`と入力すると発火する
+`Comment#></div><script>alert('flag2')</script>` と入力すると発火する
 
-`Fl4g_F0r_5w33t_D0M!!}`
+`Fl4g_F0r_5w33t_D0M!!}`  
 ***
 `FLAG{th!5_!5_my_l0ng_Fl4g_F0r_5w33t_D0M!!}`
