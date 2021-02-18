@@ -29,10 +29,10 @@ var _0x2edb=['split','height','concat','462146ImhqlY','floor','width','getElemen
 ~~~
 ---
 
-~~~a='S',xx='_',ab='}',c='C',d='T',e='F',f='{',g='n',r='c',bg='0',fv='B',i='t',j='_',k='a',m='n',n='i',o='c',u='e',jj='e',q='_',s='o',kk='d',~~~
+a='S',xx='_',ab='}',c='C',d='T',e='F',f='{',g='n',r='c',bg='0',fv='B',i='t',j='_',k='a',m='n',n='i',o='c',u='e',jj='e',q='_',s='o',kk='d',
 
 下記値を上記に置き換えればフラグ
-~~~flag=a[_0x26ff06(0x16f)](fv,c,d,e,f,g,bg,i,j,k,xx,m,n,o,jj,q,r,s,kk,u,ab)~~~
+flag=a[_0x26ff06(0x16f)](fv,c,d,e,f,g,bg,i,j,k,xx,m,n,o,jj,q,r,s,kk,u,ab)
 
 ---
 
