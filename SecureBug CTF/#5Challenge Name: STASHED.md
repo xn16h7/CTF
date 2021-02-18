@@ -110,7 +110,7 @@ http://0.0.0.0:80
 下記で指定
 http://0.0.0.0:80/robots.txt
 
-![aa](https://github.com/xn16h7/CTF/blob/master/img/writeup5.png)
+![aa](https://github.com/xn16h7/CTF/blob/master/SecureBug%20CTF/securebugctfimg/writeup5.png)
 ~~~
 User-agent: *
 Disallow: super_secret_flag_for_new_year_ctf
