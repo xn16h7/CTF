@@ -1,6 +1,7 @@
 
-ミディアムまで6問解いて6/11問でした。
+ミディアムまでは全部6問解いて6/11問でした。
 
-![テスト](img/result.png)
+
+![aaa](https://github.com/xn16h7/CTF/blob/master/img/result.png)
 
 
