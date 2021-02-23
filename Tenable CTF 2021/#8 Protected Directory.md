@@ -50,7 +50,8 @@ alesh16          (admin)
 ~~~
 
 ログイン
-> admin/alesh16
+> admin/alesh16  
+
 ![aa](https://github.com/xn16h7/CTF/blob/master/Tenable%20CTF%202021/img/%E2%91%A7.png)
 
 ## flag{cracked_the_password} 
